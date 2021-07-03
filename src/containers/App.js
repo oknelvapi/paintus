@@ -1,9 +1,10 @@
 import React from 'react'
+import Typography from '@material-ui/core/Typography';
 
 export default function App() {
   return (
     <div>
-      <h1>My React App!</h1>
+      <Typography variant="h1" component="h2" gutterBottom>My React App!</Typography>
     </div>
   )
 }
