@@ -1,0 +1,22 @@
+node_modules/**/*
+.idea
+dist
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+web-report/
+.env
+
+#misc
+.vscode/*
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# macOS
+.DS_Store
