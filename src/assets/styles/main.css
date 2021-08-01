@@ -1,0 +1,45 @@
+@import 'reset.css';
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato-Light.ttf') format('truetype');
+  /* font-weight: 400; */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato Bold';
+  src: url('../fonts/Lato-Bold.ttf') format('truetype');
+  /* font-weight: 500; */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato Medium';
+  src: url('../fonts/Lato-Regular.ttf') format('truetype');
+  /* font-weight: 600; */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato Extra Bold';
+  src: url('../fonts/Lato-Black.ttf') format('truetype');
+  /* font-weight: 700; */
+  font-display: swap;
+}
+
+body {
+  font-family: 'Lato', Arial, sans-serif;
+  color: #ffffff;
+  background-color: #2e3141;
+  background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url(../img/bg.jpg);
+  background-size: auto, cover;
+  background-attachment: fixed, fixed;
+  background-position: center, center;
+  -webkit-text-size-adjust: none;
+  -ms-overflow-style: scrollbar;
+}
+
+#container {
+  height: calc(var(--vh, 1vh) * 100);
+}

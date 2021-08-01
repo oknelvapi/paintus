@@ -1,17 +1,18 @@
 const { merge } = require('webpack-merge');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const path = require('path');
+// eslint-disable-next-line import/extensions
 const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
   mode: 'development',
-  plugins: [
-    new BundleAnalyzerPlugin({
-      analyzerHost: '0.0.0.0',
-      analyzerPort: '8059',
-    }),
-  ],
+  // plugins: [
+  //   new BundleAnalyzerPlugin({
+  //     analyzerHost: '0.0.0.0',
+  //     analyzerPort: '8059',
+  //   }),
+  // ],
   output: {
     path: path.resolve(__dirname, 'build'),
     publicPath: '/',
