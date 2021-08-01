@@ -2,11 +2,11 @@ import React, { Suspense } from 'react';
 import { Route, Switch, Router } from 'react-router-dom';
 
 import NotFound from 'Containers/NotFound';
+import Root from 'Containers/Root';
 import history from './history';
 import { routes } from './path';
 
 // * Core components ->
-import Root from 'Containers/Root';
 // import { Spinner } from 'Components/Spinner'; // ! This component does not exist yet
 // * <- Core components
 
@@ -23,24 +23,24 @@ const Loader = () => (
 const Routes = () => (
   <Router history={history}>
     <Root>
-    <Suspense fallback={<Loader />}>
-      <Switch>
-        <Route path={routes.home} exact>
-          <Home />
-        </Route>
-        <Route path={routes.works} exact>
-          <Works />
-        </Route>
-        <Route path={routes.offers} exact>
-          <Offers />
-        </Route>
-        <Route path="*" exact>
-          <NotFound />
-        </Route>
-      </Switch>
-    </Suspense>
+      <Suspense fallback={<Loader />}>
+        <Switch>
+          <Route path={routes.home} exact>
+            <Home />
+          </Route>
+          <Route path={routes.works} exact>
+            <Works />
+          </Route>
+          <Route path={routes.offers} exact>
+            <Offers />
+          </Route>
+          <Route path="*" exact>
+            <NotFound />
+          </Route>
+        </Switch>
+      </Suspense>
     </Root>
   </Router>
-  );
+);
 
 export default Routes;

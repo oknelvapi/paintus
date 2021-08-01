@@ -2,8 +2,8 @@ import React, { memo, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { Container, Box } from '@material-ui/core/';
-import { SettingsProvider } from './settingsReducer';
 import { Header, Menu, Footer } from 'Components';
+import { SettingsProvider } from './settingsReducer';
 
 const Root = memo(({ children }) => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -18,7 +18,7 @@ const Root = memo(({ children }) => {
   return (
     <>
       <SettingsProvider>
-        <Container id='container' maxWidth="false" disableGutters>
+        <Container id="container" maxWidth="false" disableGutters>
           <Box
             height="1"
             width="1"

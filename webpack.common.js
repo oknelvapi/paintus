@@ -71,7 +71,7 @@ module.exports = {
       {
         include: [path.resolve(__dirname, 'src')],
         loader: 'babel-loader',
-        resolve: { extensions: [".js", ".jsx"] },
+        resolve: { extensions: ['.js', '.jsx'] },
         options: {
           plugins: ['syntax-dynamic-import'],
           presets: [
