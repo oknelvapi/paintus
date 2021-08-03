@@ -1,4 +1,7 @@
 import { makeStyles } from '@material-ui/core/styles';
+import colors from 'Colors';
+
+const { primary } = colors;
 
 const headerStyles = makeStyles(theme => ({
   buttonMobile: {
@@ -18,7 +21,7 @@ const headerStyles = makeStyles(theme => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     transition: 'background-color 0.2s ease-in-out',
-    backgroundColor: 'rgba(53, 56, 73, 0.95)',
+    backgroundColor: primary._header_bg,
     height: theme.spacing(7),
     left: 0,
     lineHeight: theme.spacing(7),

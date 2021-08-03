@@ -1,11 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 import { Backdrop as BackdropWrapper } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 
 
-const Backdrop = ({ open , children, overflowAll }) => {
+const Backdrop = ({ open, children, overflowAll }) => {
   const theme = useTheme();
 
   return (
@@ -27,6 +27,6 @@ Backdrop.propTypes = {
 Backdrop.defaultProps = {
   open: false,
   children: null
-}
+};
 
 export default Backdrop;

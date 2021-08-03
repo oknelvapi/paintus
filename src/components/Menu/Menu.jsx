@@ -11,7 +11,7 @@ import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import Typography from '@material-ui/core/Typography';
 
-const styles = (theme) => ({
+const styles = theme => ({
   root: {
     margin: 0,
     padding: theme.spacing(2),
@@ -38,49 +38,46 @@ const DialogTitle = withStyles(styles)((props) => {
   );
 });
 
-const DialogContent = withStyles((theme) => ({
+const DialogContent = withStyles(theme => ({
   root: {
     padding: theme.spacing(2),
   },
 }))(MuiDialogContent);
 
-const DialogActions = withStyles((theme) => ({
+const DialogActions = withStyles(theme => ({
   root: {
     margin: 0,
     padding: theme.spacing(1),
   },
 }))(MuiDialogActions);
 
-const Menu = ({ open, handleClose }) => {
-
-  return (
-    <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
-      <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-        Modal title
-      </DialogTitle>
-      <DialogContent dividers>
-        <Typography gutterBottom>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-          in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-        </Typography>
-        <Typography gutterBottom>
-          Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis
-          lacus vel augue laoreet rutrum faucibus dolor auctor.
-        </Typography>
-        <Typography gutterBottom>
-          Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel
-          scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus
-          auctor fringilla.
-        </Typography>
-      </DialogContent>
-      <DialogActions>
-        <Button autoFocus onClick={handleClose} color="primary">
-          Save changes
-        </Button>
-      </DialogActions>
-    </Dialog>
-  );
-}
+const Menu = ({ open, handleClose }) => (
+  <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
+    <DialogTitle id="customized-dialog-title" onClose={handleClose}>
+      Modal title
+    </DialogTitle>
+    <DialogContent dividers>
+      <Typography gutterBottom>
+        Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
+        in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+      </Typography>
+      <Typography gutterBottom>
+        Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis
+        lacus vel augue laoreet rutrum faucibus dolor auctor.
+      </Typography>
+      <Typography gutterBottom>
+        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel
+        scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus
+        auctor fringilla.
+      </Typography>
+    </DialogContent>
+    <DialogActions>
+      <Button autoFocus onClick={handleClose} color="primary">
+        Save changes
+      </Button>
+    </DialogActions>
+  </Dialog>
+);
 
 Menu.propTypes = {
   open: PropTypes.bool.isRequired,

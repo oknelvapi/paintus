@@ -3,10 +3,14 @@ import PropTypes from 'prop-types';
 
 import { Container, Box } from '@material-ui/core/';
 import { Header, Menu, Footer } from 'Components';
+import rootStyles from 'StylesRoot';
+
 import { SettingsProvider } from './settingsReducer';
+
 
 const Root = memo(({ children }) => {
   const [openMenu, setOpenMenu] = useState(false);
+  const classes = rootStyles();
 
   const handleClickOpenMenu = () => {
     setOpenMenu(true);
@@ -18,11 +22,10 @@ const Root = memo(({ children }) => {
   return (
     <>
       <SettingsProvider>
-        <Container id="container" maxWidth="false" disableGutters>
+        <Container id="container" className={openMenu ? classes.blurred : undefined} maxWidth="false" disableGutters>
           <Box
             height="1"
             width="1"
-            pt={7}
             display="flex"
             flexDirection="column"
             justifyContent="space-between"
