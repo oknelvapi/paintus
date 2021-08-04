@@ -17,7 +17,7 @@ export const paintusTheme = createMuiTheme({
     h2: {
       color: primary.white,
       fontSize: '1.2em',
-      fontFamily: 'Raleway, Helvetica, sans-serif',
+      fontFamily: 'Raleway Bold, Helvetica, sans-serif',
       fontWeight: 700,
       letterSpacing: '0.1em',
       margin: '0 0 1em 0',

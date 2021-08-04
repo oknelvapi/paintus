@@ -2,7 +2,6 @@
 import details from 'Assets/img/img1.jpeg';
 import tech from 'Assets/img/img2.jpeg';
 import painting from 'Assets/img/img3.jpeg';
-import customer1 from 'Assets/img/customer1.png';
 import customer44 from 'Assets/img/customer44.png';
 import customer23 from 'Assets/img/customer23.png';
 import customer57 from 'Assets/img/customer57.png';
