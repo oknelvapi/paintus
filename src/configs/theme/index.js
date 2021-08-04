@@ -1,9 +1,9 @@
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createTheme } from '@material-ui/core/styles';
 import colors from 'Colors';
 
 const { primary } = colors;
 
-export const paintusTheme = createMuiTheme({
+export const paintusTheme = createTheme({
 
   palette: {
     type: 'dark',
@@ -17,7 +17,7 @@ export const paintusTheme = createMuiTheme({
     h2: {
       color: primary.white,
       fontSize: '1.2em',
-      fontFamily: 'Raleway, Helvetica, sans-serif',
+      fontFamily: 'Raleway Bold, Helvetica, sans-serif',
       fontWeight: 700,
       letterSpacing: '0.1em',
       margin: '0 0 1em 0',
