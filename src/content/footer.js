@@ -7,25 +7,27 @@ export const contacts = [
   {
     id: 2,
     text: '068 866 7306',
-    icon: 'phone'
+    icon: 'phone',
+    link: '0688667306'
 
   },
   {
     id: 3,
     text: 'paintus@ukr.net',
-    icon: 'email'
+    icon: 'email',
+    link: 'paintus@ukr.net'
   },
   {
     id: 4,
     text: 'paintuskyiv.ua',
     icon: 'facebook',
-    link: 'https://www.facebook.com/paintuskyiv.ua/'
+    link: 'paintuskyiv.ua/'
   },
   {
     id: 5,
     text: 'paintus_ua',
     icon: 'instagram',
-    link: 'https://www.instagram.com/paintus_ua/'
+    link: 'paintus_ua/'
   }
 ];
 
@@ -43,7 +45,7 @@ export const copyright = [
     linkTitle: 'Freepik'
   },
   {
-    id: 1,
+    id: 3,
     title: 'Developed by:  oknelvapi',
   }
 ];

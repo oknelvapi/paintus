@@ -48,6 +48,7 @@ const footerStyles = makeStyles(theme => ({
     borderBottom: `solid 2px ${primary._border_color}`,
   },
   mapWrap: {
+    position: 'relative',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',

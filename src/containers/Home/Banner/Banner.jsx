@@ -1,13 +1,12 @@
 /* eslint-disable max-len */
 import React, { memo } from 'react';
 
-import { Container, Box, Typography, SvgIcon } from '@material-ui/core';
+import { Box, Typography, SvgIcon } from '@material-ui/core';
 
 import bannerStyles from './styles';
 
 const Banner = memo(() => {
   const classes = bannerStyles();
-  console.log('Home');
   return (
     <Box component="section" className={classes.banner}>
       <Box className={classes.inner}>

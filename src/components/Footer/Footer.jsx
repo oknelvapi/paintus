@@ -3,34 +3,11 @@ import React, { memo } from 'react';
 // import PropTypes from 'prop-types'
 
 import { Typography, Box, List, ListItem, Link, ListItemAvatar, ListItemText, Avatar } from '@material-ui/core';
-import ImageIcon from '@material-ui/icons/Image';
-import BusinessIcon from '@material-ui/icons/Business';
-import PhoneIphoneIcon from '@material-ui/icons/PhoneIphone';
-import EmailIcon from '@material-ui/icons/Email';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import InstagramIcon from '@material-ui/icons/Instagram';
 
-
+import { getIcon, clickToCallType } from 'Utils';
 import { contacts, copyright } from 'Content/footer';
-// import Map from '../Map';
+import Map from '../Map';
 import footerStyles from './styles';
-
-const getIcon = (type) => {
-  switch (type) {
-    case 'address':
-      return <BusinessIcon />;
-    case 'phone':
-      return <PhoneIphoneIcon />;
-    case 'email':
-      return <EmailIcon />;
-    case 'facebook':
-      return <FacebookIcon />;
-    case 'instagram':
-      return <InstagramIcon />;
-    default:
-      return <ImageIcon />;
-  }
-};
 
 const Footer = memo(() => {
   const classes = footerStyles();
@@ -44,7 +21,7 @@ const Footer = memo(() => {
         </Box>
         <Box className={classes.contactsWrap}>
           <Box className={classes.mapWrap}>
-            <Typography variant="h2">Карта</Typography>
+            <Map />
           </Box>
           <Box className={classes.contactsInnerWrap}>
             <List>
@@ -57,7 +34,7 @@ const Footer = memo(() => {
                   </ListItemAvatar>
                   <ListItemText disableTypography primary={!contact?.link ? contact.text : undefined}>
                     <If condition={contact?.link}>
-                      <Link className={classes.link} href={`https://www.${contact?.text}`} color="inherit" underline="none">
+                      <Link className={classes.link} href={`${clickToCallType(contact.icon)}${contact?.link}`} color="inherit" underline="none">
                         {contact.text}
                       </Link>
                     </If>
