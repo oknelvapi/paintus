@@ -53,13 +53,15 @@ module.exports = {
       Root: path.resolve('./'),
       Source: path.resolve('./src/'),
       Assets: path.resolve('./src/assets'),
+      StylesRoot: path.resolve('./src/assets/styles'),
       Components: path.resolve('./src/components'),
       Containers: path.resolve('./src/containers'),
       Configs: path.resolve('./src/configs'),
       Utils: path.resolve('./src/utils'),
       Colors: path.resolve('./src/configs/colors'),
       Constants: path.resolve('./src/configs/constants'),
-      TranslationsRoot: path.resolve('./src/translations')
+      Translations: path.resolve('./src/translations'),
+      Content: path.resolve('./src/content')
     }
   },
   entry: [
@@ -70,7 +72,7 @@ module.exports = {
       {
         include: [path.resolve(__dirname, 'src')],
         loader: 'babel-loader',
-
+        resolve: { extensions: ['.js', '.jsx'] },
         options: {
           plugins: ['syntax-dynamic-import'],
           presets: [
@@ -78,11 +80,12 @@ module.exports = {
               '@babel/preset-env',
               {
                 modules: false
-              }
+              },
             ]
           ]
         },
-        test: /\.js$/
+
+        test: /\.(js)x?$/,
       },
       {
         test: /\.css$/,
@@ -92,7 +95,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(jpg|png|svg|gif)$/,
+        test: /\.(jpg|jpeg|png|svg|gif)$/,
         use: [
           {
             loader: 'file-loader',

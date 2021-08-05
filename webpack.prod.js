@@ -4,6 +4,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const ZipPlugin = require('zip-webpack-plugin');
 
 const path = require('path');
+// eslint-disable-next-line import/extensions
 const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
@@ -36,7 +37,7 @@ module.exports = merge(common, {
 
       // OPTIONAL: defaults to including everything
       // can be a string, a RegExp, or an array of strings and RegExps
-      include: [/\.js$/],
+      include: [/\.js$/, /\.jsx$/],
 
       // OPTIONAL: defaults to excluding nothing
       // can be a string, a RegExp, or an array of strings and RegExps
