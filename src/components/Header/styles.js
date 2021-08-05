@@ -21,7 +21,7 @@ const headerStyles = makeStyles(theme => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     transition: 'background-color 0.2s ease-in-out',
-    backgroundColor: primary._header_bg,
+    backgroundColor: 'transparent',
     height: theme.spacing(7),
     left: 0,
     lineHeight: theme.spacing(7),
@@ -32,7 +32,8 @@ const headerStyles = makeStyles(theme => ({
     zIndex: '10000'
   },
   alt: {
-    backgroundColor: 'transparent'
+    backgroundColor: primary._header_bg,
+    transition: 'background-color .25s ease-in-out '
   }
 }));
 

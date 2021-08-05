@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-import { Typography, Box, Button, Link, IconButton } from '@material-ui/core';
+import { Typography, Box, Button, Link, IconButton, useScrollTrigger } from '@material-ui/core';
 import MenuOutlinedIcon from '@material-ui/icons/MenuOutlined';
 
 import headerStyles from './styles';
@@ -11,9 +11,15 @@ import headerStyles from './styles';
 const Header = memo(({ handleClickOpenMenu }) => {
   const classes = headerStyles();
 
+  const trigger = useScrollTrigger({
+    // options.target (Node [optional]): Defaults to window.
+    disableHysteresis: true, // Defaults to false. Disable the hysteresis. Ignore the scroll direction when determining the trigger value.
+    threshold: 80, // Defaults to 100. Change the trigger value when the vertical scroll strictly crosses this threshold (exclusive).
+  });
+
   return (
     <Box
-      className={cx(classes.header, classes.alt)}
+      className={cx(classes.header, { [classes.alt]: trigger })}
       component="header"
     >
       <Typography variant="subtitle1">
