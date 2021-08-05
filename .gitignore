@@ -1,6 +1,7 @@
 node_modules/**/*
 .idea
 dist
+build
 npm-debug.*
 *.jks
 *.p8
