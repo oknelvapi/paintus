@@ -56,6 +56,8 @@ export function clickToCallType(type) {
       return 'https://www.facebook.com/';
     case 'instagram':
       return 'https://www.instagram.com/';
+    case 'address':
+      return 'https://g.page/';
     default:
       return '/';
   }

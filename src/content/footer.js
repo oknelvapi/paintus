@@ -2,7 +2,8 @@ export const contacts = [
   {
     id: 1,
     text: 'Україна, м.Київ, вулиця Голосіївська, 9, 02000',
-    icon: 'address'
+    icon: 'address',
+    link: 'paintuskyiv?share',
   },
   {
     id: 2,
