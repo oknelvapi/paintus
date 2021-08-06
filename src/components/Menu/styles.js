@@ -41,28 +41,27 @@ const menuStyles = makeStyles(theme => ({
   menuList: {
     width: '100%',
     '&>:nth-child(n+2)': {
-      borderTop: 'solid 1px rgba(212, 212, 255, 0.1)',
+      borderTop: `solid 1px ${theme.palette.divider}`,
     },
   },
   link: {
     justifyContent: 'center',
-    fontSize: '0.8em',
-    letterSpacing: '0.25em',
+    fontSize: theme.spacing(1.6),
+    letterSpacing: theme.spacing(0.5),
     lineHeight: '4em',
     textTransform: 'uppercase',
     textAlign: 'center',
     cursor: 'pointer',
     margin: 0,
     fontFamily: 'Raleway Bold',
-    transition: 'color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out',
-    borderRadius: '4px',
+    borderRadius: theme.spacing(0.5),
     '&:hover': {
       borderBottomColor: 'transparent',
-      color: '#9bf1ff !important'
+      color: primary._link_color_hover
     },
     '&:active': {
       borderBottomColor: 'transparent',
-      color: '#53e3fb !important'
+      color: primary._link_color_active
     }
   }
 }));

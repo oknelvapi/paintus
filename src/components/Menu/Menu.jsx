@@ -7,6 +7,8 @@ import { Dialog, MenuList, MenuItem, Box, IconButton, Button } from '@material-u
 import MuiDialogContent from '@material-ui/core/DialogContent';
 import CloseIcon from '@material-ui/icons/Close';
 
+
+// eslint-disable-next-line import/no-unresolved
 import { routes } from 'Routes/path';
 import menuStyles from './styles';
 
@@ -39,7 +41,7 @@ const Menu = ({ open, handleClose }) => {
         <CloseIcon />
       </IconButton>
       <MuiDialogContent className={cx(classes.content, { [classes.transform]: transform })}>
-        <MenuList className={classes.menuList}>
+        <MenuList className={classes.menuList} component="nav">
           {Object.keys(routes).map(route => (
             <MenuItem
               key={route}

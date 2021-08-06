@@ -7,6 +7,7 @@ export const paintusTheme = createTheme({
 
   palette: {
     type: 'dark',
+    divider: 'rgba(212, 212, 255, 0.1)'
   },
   typography: {
     fontFamily: [
