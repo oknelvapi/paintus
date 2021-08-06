@@ -1,8 +1,8 @@
 import React, { memo, useState } from 'react';
 import PropTypes from 'prop-types';
 
-import { Container, Box } from '@material-ui/core/';
-import { Header, Menu, Footer } from 'Components';
+import { Container, Box } from '@material-ui/core';
+import { Header, Menu, Footer, ScrollTop } from 'Components';
 import rootStyles from 'StylesRoot';
 
 import { SettingsProvider } from './settingsReducer';
@@ -39,6 +39,7 @@ const Root = memo(({ children }) => {
           </Box>
         </Container>
         <Menu open={openMenu} handleClose={handleCloseMenu} />
+        <ScrollTop />
       </SettingsProvider>
     </>
   );
