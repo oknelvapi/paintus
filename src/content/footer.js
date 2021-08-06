@@ -41,12 +41,12 @@ export const copyright = [
   },
   {
     id: 2,
-    title: 'Images:',
+    title: 'images',
     linkUrl: 'https://www.freepik.com',
     linkTitle: 'Freepik'
   },
   {
     id: 3,
-    title: 'Developed by:  oknelvapi',
+    title: 'developedBy',
   }
 ];

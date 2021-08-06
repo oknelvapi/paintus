@@ -1,5 +1,7 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
+
 import cx from 'classnames';
 
 import { Typography, Box, Button, Link, IconButton, useScrollTrigger } from '@material-ui/core';
@@ -10,7 +12,7 @@ import headerStyles from './styles';
 
 const Header = memo(({ handleClickOpenMenu }) => {
   const classes = headerStyles();
-
+  const { t } = useTranslation();
   const trigger = useScrollTrigger({
     // options.target (Node [optional]): Defaults to window.
     disableHysteresis: true, // Defaults to false. Disable the hysteresis. Ignore the scroll direction when determining the trigger value.
@@ -38,7 +40,7 @@ const Header = memo(({ handleClickOpenMenu }) => {
         endIcon={<MenuOutlinedIcon />}
         onClick={handleClickOpenMenu}
       >
-        Menu
+        {t('navigation.menu')}
       </Button>
       <IconButton className={classes.buttonMobile} size="medium" onClick={handleClickOpenMenu}>
         <MenuOutlinedIcon fontSize="inherit" />

@@ -1,5 +1,5 @@
 import React, { memo, useState } from 'react';
-
+import { useTranslation } from 'react-i18next';
 // import PropTypes from 'prop-types';
 import noPhotos from 'Assets/img/no-photos.svg';
 
@@ -37,6 +37,7 @@ const ClientReview = ({ customer, rating, photo, text, classes, handleClickOpen 
 
 
 const CustomersReviews = memo(() => {
+  const { t } = useTranslation();
   const classes = customersReviewsStyles();
   const [openReview, setOpenReview] = useState({ isOpen: false, text: null });
 
@@ -53,8 +54,8 @@ const CustomersReviews = memo(() => {
       <Box component="article" className={classes.inner}>
 
         <Box flex={1}>
-          <Typography className={classes.title} variant="h2">Відгуки наших клієнтів</Typography>
-          <Typography className={classes.subtitle}>Реальні відгуки від наших клієнтів. Всі відгуки ви можете прочитати на сторінці Google Maps, ввівши в пошук Paintus kyiv </Typography>
+          <Typography className={classes.title} variant="h2">{t('home.reviews.title')}</Typography>
+          <Typography className={classes.subtitle}>{t('home.reviews.text')}</Typography>
         </Box>
 
         <Box className={classes.cardsWrap}>
@@ -73,7 +74,7 @@ const CustomersReviews = memo(() => {
         open={openReview.isOpen}
         handleClose={handleClose}
         text={openReview?.text}
-        closeButtonTitle="Закрити"
+        closeButtonTitle={t('buttons.close')}
 
       />
     </Box>

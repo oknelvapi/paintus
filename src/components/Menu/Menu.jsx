@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
+
+import { useTranslation } from 'react-i18next';
+
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
@@ -14,12 +17,13 @@ import menuStyles from './styles';
 
 
 const Menu = ({ open, handleClose }) => {
+  const { t, i18n } = useTranslation();
   const [transform, setTransform] = useState(false);
   const classes = menuStyles();
 
   useEffect(() => {
     let timerId = null;
-    if (open) timerId = setTimeout(() => setTransform(true), 50);
+    if (open) timerId = setTimeout(() => setTransform(true), 0);
     else setTransform(false);
 
     return () => clearTimeout(timerId);
@@ -50,16 +54,17 @@ const Menu = ({ open, handleClose }) => {
               to={routes[route]}
               onClick={handleClose}
             >
-              {route}
+              {/* {route} */}
+              {t(`navigation.${route}`)}
             </MenuItem>
           ))}
         </MenuList>
         <Box display="flex" justifyContent="space-around" width="100%">
-          <Button size="medium" className={classes.button}>
-            УКР
+          <Button size="medium" className={classes.button} onClick={() => i18n.changeLanguage('ua')}>
+            {t('lang.ua')}
           </Button>
-          <Button size="medium" className={classes.button}>
-            РОС
+          <Button size="medium" className={classes.button} onClick={() => i18n.changeLanguage('ru')}>
+            {t('lang.moscal')}
           </Button>
         </Box>
       </MuiDialogContent>

@@ -60,7 +60,7 @@ module.exports = {
       Utils: path.resolve('./src/utils'),
       Colors: path.resolve('./src/configs/colors'),
       Constants: path.resolve('./src/configs/constants'),
-      Translations: path.resolve('./src/translations'),
+      Translations: path.resolve('./src/i18n'),
       Content: path.resolve('./src/content'),
       Routes: path.resolve('./src/routes'),
     }

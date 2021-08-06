@@ -22,7 +22,7 @@ const Root = memo(({ children }) => {
   return (
     <>
       <SettingsProvider>
-        <Container id="container" className={openMenu ? classes.blurred : undefined} maxWidth="false" disableGutters>
+        <Container id="container" className={openMenu ? classes.blurred : undefined} maxWidth={false} disableGutters>
           <Box
             height="1"
             width="1"

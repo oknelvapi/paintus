@@ -1,11 +1,13 @@
 /* eslint-disable max-len */
 import React, { memo } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Box, Typography, SvgIcon } from '@material-ui/core';
 
 import bannerStyles from './styles';
 
 const Banner = memo(() => {
+  const { t } = useTranslation();
   const classes = bannerStyles();
   return (
     <Box component="section" className={classes.banner}>
@@ -21,8 +23,8 @@ const Banner = memo(() => {
             </g>
           </SvgIcon>
         </Box>
-        <Typography variant="h1" className={classes.title}>Автоцентр PAINTUS</Typography>
-        <Typography className={classes.subtitle}>Покраска, полировка, рихтовка, ремонт автомобиля</Typography>
+        <Typography variant="h1" className={classes.title}>{t('home.banner.title')}</Typography>
+        <Typography className={classes.subtitle}>{t('home.banner.text')}</Typography>
       </Box>
     </Box>
   );
