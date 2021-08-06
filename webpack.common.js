@@ -61,7 +61,8 @@ module.exports = {
       Colors: path.resolve('./src/configs/colors'),
       Constants: path.resolve('./src/configs/constants'),
       Translations: path.resolve('./src/translations'),
-      Content: path.resolve('./src/content')
+      Content: path.resolve('./src/content'),
+      Routes: path.resolve('./src/routes'),
     }
   },
   entry: [
