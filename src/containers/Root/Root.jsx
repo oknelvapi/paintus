@@ -1,4 +1,4 @@
-import React, { memo, useState } from 'react';
+import React, { memo, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import { Container, Box } from '@material-ui/core';
@@ -18,6 +18,15 @@ const Root = memo(({ children }) => {
   const handleCloseMenu = () => {
     setOpenMenu(false);
   };
+
+  useEffect(() => {
+    let timerId = null;
+    const bodyTag = document.body;
+    timerId = setTimeout(() => bodyTag.classList.remove('is-preload'), 100);
+
+    return () => clearTimeout(timerId);
+
+  }, []);
 
   return (
     <>

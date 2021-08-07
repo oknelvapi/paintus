@@ -10,9 +10,9 @@ const Banner = memo(() => {
   const { t } = useTranslation();
   const classes = bannerStyles();
   return (
-    <Box component="section" className={classes.banner}>
+    <Box id="banner" component="section" className={classes.banner}>
       <Box className={classes.inner}>
-        <Box className={classes.logoWrap}>
+        <Box id="logo" className={classes.logoWrap}>
           <SvgIcon className={classes.logo}>
             <g><rect fill="none" height="24" width="24" /></g>
             <g>
