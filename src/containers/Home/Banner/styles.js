@@ -23,8 +23,17 @@ const bannerStyles = makeStyles(theme => ({
   },
   inner: {
     width: theme.spacing(110),
+    '& > p,h1': {
+      transition: 'opacity 0.5s ease, transform 0.5s ease, filter 0.25s ease',
+      transform: 'translateX(0)',
+      transitionDelay: '0.8s',
+      filter: 'blur(0)',
+    },
   },
   logoWrap: {
+    transition: 'opacity 2s ease, transform 1s ease',
+    transform: 'translateY(0)',
+    opacity: 1,
     marginBottom: theme.spacing(2.5),
     [theme.breakpoints.down('sm')]: {
       marginBottom: theme.spacing(2),
@@ -56,7 +65,7 @@ const bannerStyles = makeStyles(theme => ({
     textTransform: 'uppercase',
     fontWeight: 200,
     letterSpacing: '0.1em'
-  }
+  },
 }));
 
 export default bannerStyles;
