@@ -1,4 +1,4 @@
-import React, { memo, Fragment } from 'react';
+import React, { memo, Fragment, useEffect } from 'react';
 // import PropTypes from 'prop-types'
 import { useTranslation } from 'react-i18next';
 
@@ -10,6 +10,19 @@ import CustomersReviews from './CustomersReviews';
 
 const Home = memo(() => {
   const { t } = useTranslation();
+
+  useEffect(() => {
+    let timerId = null;
+    const bodyTag = document.body;
+    timerId = setTimeout(() => bodyTag.classList.remove('is-preload'), 100);
+
+    return () => {
+      clearTimeout(timerId);
+      bodyTag.classList.add('is-preload');
+    };
+
+  }, []);
+
   return (
     <Fragment>
       <Banner />
