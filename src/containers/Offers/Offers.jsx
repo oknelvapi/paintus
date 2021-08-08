@@ -1,16 +1,14 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+// import PropTypes from 'prop-types'
 
-const Offers = props => {
-  return (
-    <div>
-      Offers
-    </div>
-  )
-}
+const Offers = props => (
+  <div>
+    Offers
+  </div>
+);
 
 // Offers.propTypes = {
 
 // }
 
-export default Offers
+export default Offers;
