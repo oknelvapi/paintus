@@ -85,3 +85,94 @@ body.is-preload #banner p {
   -ms-filter: blur(2px);
   filter: blur(2px);
 }
+
+.Container_Spinner_Wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+};
+.Container_Spinner_Wrap * {
+  box-sizing: border-box;
+}
+
+.Container_Spinner {
+  height: 60px;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.1s linear;
+  transform: scale(10);
+}
+.Container_Spinner_Wrap.Container_Spinner {
+  /* 1500 is a max index which is used by Material-ui Components */
+  z-index: 1501;  
+  transform: scale(1);
+}
+.Container_Spinner_Loader {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 5px solid rgb(200, 200, 200);
+  border-left-color: rgb(200, 200, 200, 0.4);
+  animation-play-state: paused;
+  animation: rotate 1s infinite linear;
+}
+.Container_Spinner_Icons {
+  height: 60px;
+  width: 60px;
+  margin: auto;
+  padding: 5px;
+  border-radius: 50%;
+}
+.Container_Spinner_Wrap .Container_Spinner .Container_Spinner_Loader {
+  animation-play-state: running;
+}
+.Container_Spinner svg {
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: 24px;
+  line-height: 1;
+  color: rgb(200, 200, 200);
+  transform: scale(0) translate3d(0, 0, 0);
+}
+.Container_Spinner svg:nth-of-type(1) {
+  animation: showicons 2s infinite ease-in-out;
+}
+.Container_Spinner svg:nth-of-type(2) {
+  animation: showicons 2s 0.67s infinite ease-in-out;
+}
+.Container_Spinner svg:nth-of-type(3) {
+  animation: showicons 2s 1.3s infinite ease-in-out;
+}
+
+@keyframes showicons {
+  0% {
+    transform: scale(0);
+  }
+  11% {
+    transform: scale(1.2);
+  }
+  22% {
+    transform: scale(1);
+  }
+  33% {
+    transform: scale(0);
+  }
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}

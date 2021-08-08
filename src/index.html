@@ -19,11 +19,73 @@
   <meta name="msapplication-TileColor" content="#2b5797">
   <meta name="theme-color" content="#ffffff">
   <meta name="msapplication-config" content="/browserconfig.xml">
+  <style>
+    body {
+      margin: 0;
+    }
+
+    @keyframes zoomInOut {
+      0% {
+        transform: scale(1, 1);
+      }
+
+      50% {
+        transform: scale(1.2, 1.2);
+      }
+
+      100% {
+        transform: scale(1, 1);
+      }
+    }
+
+    .splash-wrapper {
+      width: 100vw;
+      height: calc(var(--vh, 1vh) * 100);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      -webkit-align-items: center;
+      background-color: #2e3141;
+      background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url(/assets/img/bg.jpg);
+      background-repeat: space;
+    }
+
+    .splash-container {
+      width: 20vw;
+      height: 20vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      -webkit-align-items: center;
+      border-radius: 24px;
+      background-color: #FFFFFF;
+      box-shadow: 0 0 24px 0 rgba(125, 132, 148, 0.2);
+      min-width: 200px;
+      min-height: 200px;
+
+    }
+
+    .splash-logo {
+      width: 150px;
+      height: 150px;
+      animation: zoomInOut 3s linear infinite;
+    }
+  </style>
 </head>
 
 <body class="is-preload">
+  <script type="text/javascript">
+    var vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', vh + 'px');
+  </script>
   <div id="root">
-
+    <div class="splash-wrapper">
+      <div class="splash-container">
+        <img src="/assets/favicons/android-chrome-192x192.png" alt="paintus logo" class="splash-logo" />
+      </div>
+    </div>
   </div>
 </body>
 
