@@ -1,31 +1,24 @@
-import React, { memo, Fragment, useEffect } from 'react';
+import React, { memo, Fragment } from 'react';
 // import PropTypes from 'prop-types'
 import { useTranslation } from 'react-i18next';
 
 import { articles } from 'Content/home';
+import { usePreload } from 'Hooks';
 
-import Banner from './Banner';
-import Section from './Section';
+import { Banner, Section } from 'Components';
 import CustomersReviews from './CustomersReviews';
 
 const Home = memo(() => {
   const { t } = useTranslation();
-
-  useEffect(() => {
-    let timerId = null;
-    const bodyTag = document.body;
-    timerId = setTimeout(() => bodyTag.classList.remove('is-preload'), 100);
-
-    return () => {
-      clearTimeout(timerId);
-      bodyTag.classList.add('is-preload');
-    };
-
-  }, []);
+  usePreload();
 
   return (
     <Fragment>
-      <Banner />
+      <Banner
+        page="home"
+        title={t('home.banner.title')}
+        text={t('home.banner.text')}
+      />
       {articles.map((section, idx) => (
         <Section
           key={section.id}

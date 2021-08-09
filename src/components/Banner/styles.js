@@ -21,6 +21,9 @@ const bannerStyles = makeStyles(theme => ({
       padding: theme.spacing(20, 0, 9.5, 0),
     }
   },
+  notTriangular: {
+    marginBottom: 0
+  },
   inner: {
     width: theme.spacing(110),
     '& > p,h1': {
