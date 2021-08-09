@@ -79,6 +79,9 @@ const sectionStyles = makeStyles(theme => ({
       // padding: theme.spacing(6, 0, 2, 0),
       width: theme.spacing(110),
     },
+    ' & > div> ul > li': {
+      textAlign: 'right'
+    }
   },
   innerReverse: {
     flexDirection: 'column-reverse',
@@ -87,6 +90,9 @@ const sectionStyles = makeStyles(theme => ({
       alignItems: 'center',
       flexDirection: 'row-reverse',
     },
+    ' & > div> ul > li': {
+      textAlign: 'left'
+    }
   },
   image: {
     borderRadius: '50%',
@@ -116,6 +122,11 @@ const sectionStyles = makeStyles(theme => ({
   },
   subtitle: {
 
+  },
+  subheader: {
+    // fontStyle: 'italic',
+    // fontFamily: 'Raleway Bold',
+    textTransform: 'uppercase',
   }
 
 }));

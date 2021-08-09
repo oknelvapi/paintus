@@ -63,6 +63,7 @@ module.exports = {
       Translations: path.resolve('./src/i18n'),
       Content: path.resolve('./src/content'),
       Routes: path.resolve('./src/routes'),
+      Hooks: path.resolve('./src/hooks'),
     }
   },
   entry: [
